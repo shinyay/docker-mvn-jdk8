@@ -12,16 +12,18 @@ The Dockerfile generates Maven with Oracke Java 8 images
 
 
 ## Requirement
-
+- Docker Store Account
+- Oracle Java 8 SE on Docker Store cheked out
+  - [Oracle Java 8 SE (Server JRE)](https://store.docker.com/images/oracle-serverjre-8)
 
 ## Usage
 
-`docker pull shinya/mvn`
+`docker pull shinya/docker-mvn`
 
 ## Installation
 
 ### Startup
-`docker run -it --rm shinya/mvn:3.5.0`
+`docker run -it --rm shinya/docker-mvn`
 
 ## Licence
 
