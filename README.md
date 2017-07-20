@@ -1,6 +1,6 @@
 # Dockerfile for Maven
 
-The Dockerfile generates Maven with Oracke Java 8 images
+The Dockerfile generates Maven with Oracle Java 8 images
 
 ## Description
 
