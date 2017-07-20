@@ -12,10 +12,10 @@ Java and Maven vesion is the following:
 - Mavan: Maven 3.5.0
 
 ## Demo
-
+![Demo](docs/images/docker-mvn01.gif)
 
 ## Features
-
+All of Docker functions
 
 ## Requirement
 - Docker Store Account
