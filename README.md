@@ -1,29 +1,40 @@
 # Dockerfile for Maven
 
-The Dockerfile generates Maven with Oracke Java 8 images
+The Dockerfile generates Maven with Oracle Java 8 images
 
 ## Description
 
+[Apache Maven](https://maven.apache.org/) is a project management and comprehension tool which is generally used.
+This Dockerfile makes Maven environment pre-installed and configured Java and Maven.
+Java and Maven vesion is the following:
+
+- Java: Oracle JDK 8 (1.8.0_131 as of 20-July-2017)
+- Mavan: Maven 3.5.0
 
 ## Demo
-
+![Demo](docs/images/docker-mvn01.gif)
 
 ## Features
-
+All of Docker functions
 
 ## Requirement
 - Docker Store Account
 - Oracle Java 8 SE on Docker Store cheked out
   - [Oracle Java 8 SE (Server JRE)](https://store.docker.com/images/oracle-serverjre-8)
 
-## Usage
-
-`docker pull shinya/docker-mvn`
-
 ## Installation
 
-### Startup
-`docker run -it --rm shinya/docker-mvn`
+`docker pull shinyay/docker-mvn-jdk8:3.5.0`
+
+## Usage
+
+`docker run -it --rm -v [LOCAL_MAVEN_PROJECT]:[WORKDIR_IN_CONTAINER] -w [WORKDIR_IN_CONTAINER] shinyay/docker-mvn-jdk8:3.5.0 mvn [MAVEN GOAL]`
+
+### Example: mvn clean
+`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.5.0 mvn clean`
+
+### Example: mvn package
+`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.5.0 mvn package`
 
 ## Licence
 
