@@ -8,8 +8,8 @@ The Dockerfile generates Maven with Oracle Java 8 images
 This Dockerfile makes Maven environment pre-installed and configured Java and Maven.
 Java and Maven vesion is the following:
 
-- Java: Oracle JDK 8 (1.8.0_131 as of 20-July-2017)
-- Mavan: Maven 3.5.0
+- Java: Oracle JDK 8 (1.8.0_241-b07 as of 20-May-2020)
+- Mavan: Maven 3.6.3
 
 ## Demo
 ![Demo](docs/images/docker-mvn01.gif)
@@ -24,17 +24,17 @@ All of Docker functions
 
 ## Installation
 
-`docker pull shinyay/docker-mvn-jdk8:3.5.0`
+`docker pull shinyay/docker-mvn-jdk8:3.6.3`
 
 ## Usage
 
-`docker run -it --rm -v [LOCAL_MAVEN_PROJECT]:[WORKDIR_IN_CONTAINER] -w [WORKDIR_IN_CONTAINER] shinyay/docker-mvn-jdk8:3.5.0 mvn [MAVEN GOAL]`
+`docker run -it --rm -v [LOCAL_MAVEN_PROJECT]:[WORKDIR_IN_CONTAINER] -w [WORKDIR_IN_CONTAINER] shinyay/docker-mvn-jdk8:3.6.3 mvn [MAVEN GOAL]`
 
 ### Example: mvn clean
-`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.5.0 mvn clean`
+`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.6.3 mvn clean`
 
 ### Example: mvn package
-`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.5.0 mvn package`
+`docker run -it --rm -v /home/shinyay/works/mvn-projects/mvn-webapp/mytest-app:/usr/src/mvnproject -w /usr/src/mvnproject shinya/mvn:3.6.3 mvn package`
 
 ## Licence
 
